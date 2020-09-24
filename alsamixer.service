@@ -1,0 +1,11 @@
+[Unit]
+Description=alsamixer
+After=network.target
+After=systemd-user-sessions.service
+After=network-online.target
+
+[Service]
+ExecStart=/etc/init.d/alsamixer.sh
+
+[Install]
+WantedBy=multi-user.target
